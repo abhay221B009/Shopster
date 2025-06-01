@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import all_product from "../Components/Assets/all_product";
 
 // Create context
-export const ShopContext = createContext(null);
+export const ShopContext = createContext(all_product);
 
 // Provider component
 const ShopContextProvider = (props) => {
