@@ -30,7 +30,7 @@ const App = () => {
           />
           <Route
             path="/womens"
-            element={<ShopCategory banner={women_banner} category="women" />}
+            element={<ShopCategory banner={women_banner} category="womens" />}
           />
           <Route
             path="/kids"
