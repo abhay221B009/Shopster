@@ -1,0 +1,78 @@
+.loginsignup {
+  width: 100%;
+  height: 100%;
+  background: #fce3fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.loginsignup-container {
+  width: 580px;
+  max-width: 90%;
+  background: white;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loginsignup-container h1 {
+  margin: 15px 0px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 30px;
+}
+
+.loginsignup-fields input {
+  height: 72px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
+  box-sizing: border-box; /* Added to include padding in width calculation */
+}
+
+.loginsignup-container button {
+  width: 100%; /* Changed from 580px to 100% to fit container */
+  height: 72px;
+  color: white;
+  background: red;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500; /* Removed 'px' - font-weight doesn't use pixels */
+  cursor: pointer;
+}
+
+.loginsignup-login {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500; /* Removed 'px' - font-weight doesn't use pixels */
+}
+
+.loginsignup-login span {
+  color: #0d10ba;
+  font-weight: 600;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}

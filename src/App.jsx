@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import men_banner from "./Components/Assets/banner_mens.png";
 import women_banner from "./Components/Assets/banner_women.png";
 import kid_banner from "./Components/Assets/banner_kids.png";
+// import Wishlist from "./Pages/Wishlist";
 // import Hero from './Components/Hero/Hero';
 // import Popular from './Components/Popular/Popular';
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          {/* <Route path="/wishlist" element={<Wishlist />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

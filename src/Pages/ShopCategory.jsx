@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./ShopCategory.css";
-import {ShopContext} from "../Context/ShopContext";
+import { ShopContext } from "../Context/ShopContext";
 import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 const ShopCategory = (props) => {
@@ -8,7 +8,7 @@ const ShopCategory = (props) => {
 
   return (
     <div className="shop-Category">
-      <img src={props.banner} alt="" />
+      <img className="shopcategory-banner" src={props.banner} alt="" />
       <div className="shopcategory-indexSort">
         {" "}
         {/* ✅ Fixed tag */}
@@ -37,6 +37,9 @@ const ShopCategory = (props) => {
               return null;
             }
           })}
+      </div>
+      <div className="shopcategory-loadmore">
+        <button>Explore More </button>
       </div>
     </div>
   );
