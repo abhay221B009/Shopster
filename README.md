@@ -3,7 +3,7 @@
 E-commerce website
 =======
 # React + Vite
-# Currently properly works on pc's only.
+# Currently properly works on desktop's only.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
