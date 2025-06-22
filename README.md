@@ -1,10 +1,9 @@
 <<<<<<< HEAD
 # Shopster
 E-commerce website
-#visit_master_branch_for_codes
 =======
 # React + Vite
-
+# Currently properly works on pc's only.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
