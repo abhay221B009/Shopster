@@ -7,6 +7,46 @@ const CartItems = () => {
   const { all_product, cartItems, removeFromCart, getTotalCartAmount } =
     useContext(ShopContext);
 
+  function handleRazorpayPayment() {
+    const amount = getTotalCartAmount() * 100; // Razorpay works in paise
+    const options = {
+      key: "rzp_test_1DP5mmOlF5G5ag", // Demo key, replace with your own for production
+      amount: amount || 10000, // default to 100.00 INR if cart is empty
+      currency: "USD",
+      name: "Shopster Demo",
+      description: "Test Transaction",
+      image: "https://your-logo-url.com/logo.png", // Optional: replace with your logo
+      handler: function (response) {
+        // Improved: Show a styled message instead of alert
+        const paymentDiv = document.createElement("div");
+        paymentDiv.style.position = "fixed";
+        paymentDiv.style.top = "20px";
+        paymentDiv.style.right = "20px";
+        paymentDiv.style.background = "#4BB543";
+        paymentDiv.style.color = "white";
+        paymentDiv.style.padding = "16px 24px";
+        paymentDiv.style.borderRadius = "8px";
+        paymentDiv.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+        paymentDiv.style.zIndex = 9999;
+        paymentDiv.innerText = `Payment successful! Payment ID: ${response.razorpay_payment_id}`;
+        document.body.appendChild(paymentDiv);
+        setTimeout(() => {
+          paymentDiv.remove();
+        }, 5000);
+      },
+      prefill: {
+        name: "Test User",
+        email: "test.user@example.com",
+        contact: "9999999999",
+      },
+      theme: {
+        color: "#f37254",
+      },
+    };
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  }
+
   return (
     <div className="cartitems">
       <div className="cartitems-format-main">
@@ -67,7 +107,7 @@ const CartItems = () => {
               <h3>${getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <button onClick={handleRazorpayPayment}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cartitems-promocode">
           <p>If you have a promo code , Enter it here</p>
