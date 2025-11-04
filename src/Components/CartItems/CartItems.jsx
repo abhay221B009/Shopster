@@ -12,7 +12,7 @@ const CartItems = () => {
     const options = {
       key: "rzp_test_1DP5mmOlF5G5ag", // Demo key, replace with your own for production
       amount: amount || 10000, // default to 100.00 INR if cart is empty
-      currency: "USD",
+      currency: "INR",
       name: "Shopster Demo",
       description: "Test Transaction",
       image: "https://your-logo-url.com/logo.png", // Optional: replace with your logo
